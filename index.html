@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>瀚宇天成生技股份有限公司 | Han Yu Tian Cheng Biotech — CAT 細胞抗凍技術</title>
+<meta name="description" content="瀚宇天成生技股份有限公司 — 超導液態極速冷凍 × 抗凍蛋白冷凍液。全球唯一從動物養殖防凍、產品耐凍、急速冷凍設備冷凍液到儲存運輸的一體化解決方案廠商。">
+<meta name="theme-color" content="#04070F">
+<link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+<meta property="og:title" content="瀚宇天成生技 | CAT 細胞抗凍技術 · 超導液態極速冷凍">
+<meta property="og:description" content="全球唯一從動物養殖防凍、產品耐凍、急速冷凍設備冷凍液到儲存運輸的一體化凍鮮解決方案。">
+<meta property="og:image" content="assets/img/hero-cryo.webp">
+<meta property="og:type" content="website">
+<link rel="preload" href="assets/fonts/QGYvz_MVcBeNP4NJtEtq.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<!-- ════════════ PRELOADER ════════════ -->
+<div class="preloader" id="preloader">
+  <div class="pre-inner">
+    <svg class="pre-mark" viewBox="0 0 120 120" fill="none">
+      <g class="pre-hex">
+        <path d="M60 6 L106 33 L106 87 L60 114 L14 87 L14 33 Z" />
+        <path d="M60 22 L92 40 L92 80 L60 98 L28 80 L28 40 Z" />
+      </g>
+      <g class="pre-flake">
+        <path d="M60 34 L60 86 M41 45 L79 75 M79 45 L41 75" />
+        <path d="M60 34 l-7 -8 M60 34 l7 -8 M60 86 l-7 8 M60 86 l7 8" />
+        <path d="M41 45 l-10 -2 M41 45 l-1 -10 M79 75 l10 2 M79 75 l1 10" />
+        <path d="M79 45 l10 -2 M79 45 l1 -10 M41 75 l-10 2 M41 75 l-1 10" />
+      </g>
+    </svg>
+    <div class="pre-bar"><i id="preFill"></i></div>
+    <div class="pre-num"><span id="preNum">0</span>%</div>
+    <div class="pre-label" data-i18n="pre.label">CAT 細胞抗凍技術 · 初始化</div>
+  </div>
+</div>
+
+<!-- ════════════ CUSTOM CURSOR ════════════ -->
+<div class="cursor" id="cursor"><span></span></div>
+
+<!-- ════════════ SCROLL PROGRESS ════════════ -->
+<div class="scroll-progress"><i id="scrollBar"></i></div>
+
+<!-- ════════════ HEADER ════════════ -->
+<header class="hdr" id="hdr">
+  <a href="#home" class="brand" aria-label="瀚宇天成生技">
+    <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+      <path d="M24 2 L43 13 L43 35 L24 46 L5 35 L5 13 Z" stroke="url(#bg1)" stroke-width="1.4"/>
+      <path d="M24 2 L43 13 L43 35 L24 46 L5 35 L5 13 Z" fill="url(#bg1)" fill-opacity=".08"/>
+      <path d="M24 13 L24 35 M16 17.5 L32 30.5 M32 17.5 L16 30.5" stroke="url(#bg1)" stroke-width="1.2" stroke-linecap="round"/>
+      <circle cx="24" cy="24" r="2.6" fill="url(#bg1)"/>
+      <defs><linearGradient id="bg1" x1="0" y1="0" x2="48" y2="48">
+        <stop offset="0" stop-color="#35E0F5"/><stop offset=".55" stop-color="#6FF2D6"/><stop offset="1" stop-color="#E8C88A"/>
+      </linearGradient></defs>
+    </svg>
+    <span class="brand-txt">
+      <b data-i18n="brand.name">瀚宇天成生技</b>
+      <em data-i18n="brand.en">Han Yu Tian Cheng Biotech</em>
+    </span>
+  </a>
+
+  <nav class="nav" id="nav">
+    <a href="#home"      class="nav-a" data-i18n="nav.home">首頁</a>
+    <a href="#about"     class="nav-a" data-i18n="nav.about">關於我們</a>
+    <a href="#tech"      class="nav-a" data-i18n="nav.tech">核心技術</a>
+    <a href="#compare"   class="nav-a" data-i18n="nav.compare">技術比較</a>
+    <a href="#advantage" class="nav-a" data-i18n="nav.advantage">六大優勢</a>
+    <a href="#market"    class="nav-a" data-i18n="nav.market">市場應用</a>
+    <a href="#client"    class="nav-a" data-i18n="nav.client">客戶合作</a>
+    <a href="#flow"      class="nav-a" data-i18n="nav.flow">交易流程</a>
+    <a href="#contact"   class="nav-a" data-i18n="nav.contact">聯絡我們</a>
+  </nav>
+
+  <div class="hdr-right">
+    <button class="lang" id="langBtn" aria-label="切換語言">
+      <span class="lang-on" id="langOn">繁</span>
+      <span class="lang-sep">/</span>
+      <span id="langOff">EN</span>
+    </button>
+    <a href="#contact" class="btn btn-sm magnetic" data-i18n="nav.cta">洽詢合作</a>
+    <button class="burger" id="burger" aria-label="選單"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<!-- ════════════ MOBILE MENU ════════════ -->
+<div class="mnav" id="mnav">
+  <div class="mnav-bg"></div>
+  <nav class="mnav-list">
+    <a href="#home"      data-i18n="nav.home">首頁</a>
+    <a href="#about"     data-i18n="nav.about">關於我們</a>
+    <a href="#tech"      data-i18n="nav.tech">核心技術</a>
+    <a href="#compare"   data-i18n="nav.compare">技術比較</a>
+    <a href="#advantage" data-i18n="nav.advantage">六大優勢</a>
+    <a href="#market"    data-i18n="nav.market">市場應用</a>
+    <a href="#client"    data-i18n="nav.client">客戶合作</a>
+    <a href="#flow"      data-i18n="nav.flow">交易流程</a>
+    <a href="#contact"   data-i18n="nav.contact">聯絡我們</a>
+  </nav>
+  <div class="mnav-foot">
+    <button class="lang lang-m" id="langBtn2"><span id="langOn2">繁</span><span class="lang-sep">/</span><span id="langOff2">EN</span></button>
+    <p data-i18n="brand.en">Han Yu Tian Cheng Biotech</p>
+  </div>
+</div>
+
+<!-- ════════════ HERO ════════════ -->
+<section class="hero" id="home">
+  <div class="hero-media">
+    <img src="assets/img/hero-cryo.webp" alt="" class="hero-img" id="heroImg">
+    <div class="hero-veil"></div>
+    <div class="hero-grid"></div>
+  </div>
+  <canvas class="hero-canvas" id="heroCanvas"></canvas>
+
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <div class="eyebrow reveal">
+        <span class="dot"></span>
+        <span data-i18n="hero.eyebrow">食品保存技術 · 營運企劃書</span>
+      </div>
+
+      <h1 class="hero-h1">
+        <span class="line reveal" data-d="60">
+          <span class="grad" data-i18n="hero.t1">超導液態極速冷凍</span>
+        </span>
+        <span class="line reveal" data-d="180">
+          <span class="x">×</span>
+          <span class="grad2" data-i18n="hero.t2">抗凍蛋白冷凍液</span>
+        </span>
+      </h1>
+
+      <p class="hero-sub reveal" data-d="300" data-i18n="hero.sub">
+        以 CAT 細胞抗凍技術重新定義冷凍保鮮 —— 節省能源、降低成本、延長鮮度，把冷凍鮮美的漁獲、肉品與水果行銷至世界各地。
+      </p>
+
+      <div class="hero-cta reveal" data-d="400">
+        <a href="#tech" class="btn btn-primary magnetic">
+          <span data-i18n="hero.cta1">探索核心技術</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#contact" class="btn btn-ghost magnetic" data-i18n="hero.cta2">成為合作夥伴</a>
+      </div>
+
+      <!-- Interactive freeze simulator -->
+      <div class="sim reveal" data-d="520">
+        <div class="sim-head">
+          <span class="sim-title" data-i18n="sim.title">即時凍結模擬</span>
+          <div class="seg" id="seg">
+            <button class="seg-b active" data-mode="legacy" data-i18n="sim.legacy">傳統冷凍</button>
+            <button class="seg-b" data-mode="cat" data-i18n="sim.cat">CAT 抗凍技術</button>
+            <i class="seg-slider" id="segSlider"></i>
+          </div>
+        </div>
+        <div class="sim-meters">
+          <div class="meter">
+            <div class="meter-top"><span data-i18n="sim.crystal">冰晶尺寸</span><b id="mCrystal">—</b></div>
+            <div class="meter-track"><i id="bCrystal"></i></div>
+          </div>
+          <div class="meter">
+            <div class="meter-top"><span data-i18n="sim.integrity">細胞完整度</span><b id="mCell">—</b></div>
+            <div class="meter-track"><i id="bCell" class="good"></i></div>
+          </div>
+          <div class="meter">
+            <div class="meter-top"><span data-i18n="sim.drip">解凍失水率</span><b id="mDrip">—</b></div>
+            <div class="meter-track"><i id="bDrip" class="warn"></i></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-stats reveal" data-d="620">
+      <div class="hstat">
+        <b class="num" data-to="15" data-suffix="+">0</b>
+        <span data-i18n="hero.s1">年冷凍技術深耕</span>
+      </div>
+      <div class="hstat">
+        <b class="num" data-to="20" data-suffix="×">0</b>
+        <span data-i18n="hero.s2">液體熱傳導率<br>（對比空氣）</span>
+      </div>
+      <div class="hstat">
+        <b class="num" data-to="10" data-suffix="+">0</b>
+        <span data-i18n="hero.s3">年商品化測試</span>
+      </div>
+      <div class="hstat hl">
+        <b>-35<i>°C</i></b>
+        <span data-i18n="hero.s4">超導冷凍液工作溫度</span>
+      </div>
+    </aside>
+  </div>
+
+  <div class="hero-bottom">
+    <a href="#about" class="scroll-hint">
+      <span data-i18n="hero.scroll">向下探索</span>
+      <i></i>
+    </a>
+    <div class="hero-ticker">
+      <div class="ticker-track" id="ticker">
+        <span data-i18n="tick.1">SLRF 超導液態抗凍系統</span><em>◆</em>
+        <span data-i18n="tick.2">SR 專利抗凍蛋白 DP-AFPs</span><em>◆</em>
+        <span data-i18n="tick.3">全球唯一一體化冷鏈解決方案</span><em>◆</em>
+        <span data-i18n="tick.4">德國發明專利 2016</span><em>◆</em>
+        <span data-i18n="tick.5">零污染 · 低能耗 · 低成本</span><em>◆</em>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ ABOUT ════════════ -->
+<section class="sec sec-about" id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx">01</span>
+      <div>
+        <h2 class="sec-t reveal" data-i18n="about.t">公司簡介</h2>
+        <p class="sec-st reveal" data-d="80">Company Overview</p>
+      </div>
+      <p class="sec-desc reveal" data-d="140" data-i18n="about.desc">
+        民國 108 年 10 月成立，深耕生物抗凍保鮮冷凍技術，以十年商品測試與國家級專利為基礎，打造從產地到餐桌的凍鮮供應鏈。
+      </p>
+    </div>
+
+    <div class="pillars">
+      <article class="pillar reveal" data-d="0">
+        <span class="p-ico">
+          <svg viewBox="0 0 32 32" fill="none"><path d="M16 3 L28 10 v12 L16 29 L4 22 V10 Z" stroke="currentColor" stroke-width="1.3"/><path d="M16 11 v10 M11 13.5 21 18.5 M21 13.5 11 18.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+        </span>
+        <h3 data-i18n="about.p1t">公司成立</h3>
+        <p data-i18n="about.p1d">民國 108 年 10 月成立，深耕生物抗凍保鮮冷凍技術。</p>
+      </article>
+      <article class="pillar reveal" data-d="120">
+        <span class="p-ico">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="10" r="4.5" stroke="currentColor" stroke-width="1.3"/><path d="M6 28c0-5.5 4.5-10 10-10s10 4.5 10 10" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M24 6l2 2 3.5-3.5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <h3 data-i18n="about.p2t">技術團隊</h3>
+        <p data-i18n="about.p2d">總經理林谷峻深耕冷凍技術逾 15 年；2011 年研發成功抗凍蛋白萃取技術，2016 年取得德國發明專利。</p>
+      </article>
+      <article class="pillar reveal" data-d="240">
+        <span class="p-ico">
+          <svg viewBox="0 0 32 32" fill="none"><rect x="5" y="12" width="22" height="14" rx="2.5" stroke="currentColor" stroke-width="1.3"/><path d="M5 18h22M11 12V8a2 2 0 012-2h6a2 2 0 012 2v4" stroke="currentColor" stroke-width="1.3"/><circle cx="16" cy="22" r="1.8" fill="currentColor"/></svg>
+        </span>
+        <h3 data-i18n="about.p3t">商品化實績</h3>
+        <p data-i18n="about.p3d">十年商品測試，2020 年與台灣鮮乳（中華民國農會）簽約設廠，冬季收購鮮乳冷凍，2021 年夏季上市。</p>
+        <span class="p-tag" data-i18n="about.p3tag">總經理親自把關產線與抗凍蛋白製程品質</span>
+      </article>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <div class="tl-line"><i id="tlFill"></i></div>
+      <div class="tl-row reveal" data-d="0">
+        <div class="tl-dot"></div><div class="tl-year">2011</div>
+        <div class="tl-body"><h4 data-i18n="tl.1t">抗凍蛋白萃取技術研發成功</h4><p data-i18n="tl.1d">成功自生物體萃取抗凍蛋白，奠定 CAT 細胞抗凍技術基礎。</p></div>
+      </div>
+      <div class="tl-row reveal" data-d="100">
+        <div class="tl-dot"></div><div class="tl-year">2016</div>
+        <div class="tl-body"><h4 data-i18n="tl.2t">取得德國發明專利</h4><p data-i18n="tl.2d">抗凍蛋白技術獲國際專利肯定，技術布局邁向全球。</p></div>
+      </div>
+      <div class="tl-row reveal" data-d="200">
+        <div class="tl-dot hl"></div><div class="tl-year">2019<i data-i18n="tl.2n">民國 108 年 10 月</i></div>
+        <div class="tl-body"><h4 data-i18n="tl.3t">瀚宇天成生技正式成立</h4><p data-i18n="tl.3d">公司成立，專注生物抗凍保鮮冷凍技術之研發與商業化。</p></div>
+      </div>
+      <div class="tl-row reveal" data-d="300">
+        <div class="tl-dot"></div><div class="tl-year">2020</div>
+        <div class="tl-body"><h4 data-i18n="tl.4t">與台灣鮮乳（中華民國農會）簽約設廠</h4><p data-i18n="tl.4d">冬季收購鮮乳進行冷凍儲存，建立亞洲指標性凍鮮鮮乳產線。</p></div>
+      </div>
+      <div class="tl-row reveal" data-d="400">
+        <div class="tl-dot hl"></div><div class="tl-year">2021</div>
+        <div class="tl-body"><h4 data-i18n="tl.5t">冷凍鮮乳夏季正式上市</h4><p data-i18n="tl.5d">驗證「冬季收購、夏季上市」的跨季節供需調節商業模式。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ TECHNOLOGY ════════════ -->
+<section class="sec sec-tech" id="tech">
+  <div class="tech-glow"></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx">02</span>
+      <div>
+        <h2 class="sec-t reveal"><span data-i18n="tech.t">核心技術</span> <em class="sec-em">CAT</em></h2>
+        <p class="sec-st reveal" data-d="80">Cells Antifreeze Technology</p>
+      </div>
+      <p class="sec-desc reveal" data-d="140" data-i18n="tech.desc">
+        新一代生物抗凍保鮮冷凍技術，全面提升保鮮冷凍水準，節省能源、降低成本並延長食物新鮮度，將冷凍鮮美的漁獲、肉品與水果行銷至世界各地。
+      </p>
+    </div>
+
+    <div class="tabs reveal" data-d="180">
+      <div class="tabs-bar" id="tabsBar">
+        <button class="tab-b active" data-tab="0">
+          <span class="tab-n">01</span><span data-i18n="tech.tab1">超導液態抗凍系統</span><em>SLRF System</em>
+        </button>
+        <button class="tab-b" data-tab="1">
+          <span class="tab-n">02</span><span data-i18n="tech.tab2">SR 專利抗凍蛋白</span><em>DP-AFPs</em>
+        </button>
+        <button class="tab-b" data-tab="2">
+          <span class="tab-n">03</span><span data-i18n="tech.tab3">一體化解決方案</span><em>Turn-key</em>
+        </button>
+        <i class="tabs-ink" id="tabsInk"></i>
+      </div>
+
+      <div class="tabs-body">
+        <!-- Tab 0 -->
+        <div class="tab-p active" data-p="0">
+          <div class="tab-grid">
+            <div class="tab-copy">
+              <h3 data-i18n="tech.t1h">以 -30°C 至 -35°C 酒精混合冷凍液為媒介</h3>
+              <p data-i18n="tech.t1p">液體熱傳導率為空氣的 20 倍，能在最短時間通過最大冰晶生成區，抑制冰晶形成、避免細胞膜破壞。</p>
+              <ul class="checks">
+                <li><span data-i18n="tech.t1l1">液體熱傳導率達空氣 20 倍</span></li>
+                <li><span data-i18n="tech.t1l2">最短時間穿越最大冰晶生成區</span></li>
+                <li><span data-i18n="tech.t1l3">完整保存細胞膜結構不被破壞</span></li>
+              </ul>
+            </div>
+            <div class="tab-vis">
+              <div class="thermo">
+                <div class="th-scale">
+                  <i style="--v:88%"></i><i style="--v:66%"></i><i style="--v:44%"></i><i style="--v:22%"></i>
+                </div>
+                <div class="th-body"><div class="th-liquid"></div><div class="th-bubble" style="--x:30%;--d:0s"></div><div class="th-bubble" style="--x:62%;--d:1.4s"></div><div class="th-bubble" style="--x:46%;--d:2.6s"></div></div>
+                <div class="th-marks">
+                  <span>-35<i>°C</i></span><span>-30<i>°C</i></span><span>-18<i>°C</i></span><span>0<i>°C</i></span>
+                </div>
+              </div>
+              <div class="kx"><b class="num" data-to="20" data-suffix="×">0</b><span data-i18n="tech.t1k">熱傳導率<br>vs 空氣</span></div>
+            </div>
+          </div>
+        </div>
+        <!-- Tab 1 -->
+        <div class="tab-p" data-p="1">
+          <div class="tab-grid rev">
+            <div class="tab-copy">
+              <h3 data-i18n="tech.t2h">特殊碳水化合物組成的抗凍保鮮液</h3>
+              <p data-i18n="tech.t2p">分子量小、易入細胞，形成保護膜並提高細胞抗凍能力，抑制冰晶生長、防止解凍後脫水與變質。</p>
+              <ul class="checks">
+                <li><span data-i18n="tech.t2l1">分子量小，可深入細胞內部</span></li>
+                <li><span data-i18n="tech.t2l2">於細胞表面形成保護膜</span></li>
+                <li><span data-i18n="tech.t2l3">有效防止解凍後脫水與變質</span></li>
+              </ul>
+            </div>
+            <div class="tab-vis">
+              <img src="assets/img/tech-cell.webp" alt="抗凍蛋白保護細胞示意" class="vis-img" loading="lazy">
+              <div class="vis-orb o1"></div><div class="vis-orb o2"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Tab 2 -->
+        <div class="tab-p" data-p="2">
+          <div class="tab-grid">
+            <div class="tab-copy">
+              <h3 data-i18n="tech.t3h">全球唯一的一體化凍鮮解決方案</h3>
+              <p data-i18n="tech.t3p">從動物養殖防凍、產品耐凍、急速冷凍設備冷凍液，到儲存運輸，提供端到端的完整技術與設備輸出。</p>
+              <div class="chain">
+                <span data-i18n="tech.c1">養殖防凍</span><i>→</i>
+                <span data-i18n="tech.c2">產品耐凍</span><i>→</i>
+                <span data-i18n="tech.c3">急速冷凍</span><i>→</i>
+                <span data-i18n="tech.c4">儲存運輸</span>
+              </div>
+            </div>
+            <div class="tab-vis">
+              <img src="assets/img/global-network.webp" alt="全球冷鏈網絡" class="vis-img" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ COMPARISON ════════════ -->
+<section class="sec sec-cmp" id="compare">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx">03</span>
+      <div>
+        <h2 class="sec-t reveal" data-i18n="cmp.t">技術比較</h2>
+        <p class="sec-st reveal" data-d="80">Technology Comparison</p>
+      </div>
+      <p class="sec-desc reveal" data-d="140" data-i18n="cmp.desc">
+        超導液態極速冷凍對比傳統冷凍方式，在保鮮時間與產品品質皆優，同時擁有低能耗、低成本、零污染的綜合優勢。
+      </p>
+    </div>
+
+    <div class="cmp-grid">
+      <!-- Radar -->
+      <div class="cmp-radar reveal" data-d="0">
+        <div class="radar-box">
+          <svg id="radar" viewBox="0 0 360 360" aria-label="技術雷達比較圖"></svg>
+        </div>
+        <div class="radar-legend" id="legend"></div>
+      </div>
+
+      <!-- Table -->
+      <div class="cmp-table reveal" data-d="140">
+        <div class="tbl-scroll">
+          <table class="tbl">
+            <thead>
+              <tr>
+                <th data-i18n="cmp.th0">冷凍方式</th>
+                <th data-i18n="cmp.th1">凍結時間</th>
+                <th data-i18n="cmp.th2">保鮮時間</th>
+                <th data-i18n="cmp.th3">產品品質</th>
+                <th data-i18n="cmp.th4">能耗</th>
+                <th data-i18n="cmp.th5">成本</th>
+                <th data-i18n="cmp.th6">環境污染</th>
+              </tr>
+            </thead>
+            <tbody id="tblBody"></tbody>
+          </table>
+        </div>
+        <p class="tbl-note">
+          <svg viewBox="0 0 20 20" fill="none"><circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.2"/><path d="M10 9v5M10 6.2v.6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/></svg>
+          <span data-i18n="cmp.note">點擊表中任一列，可在左側雷達圖中聚焦該冷凍技術之綜合表現。</span>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ ADVANTAGES ════════════ -->
+<section class="sec sec-adv" id="advantage">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx">04</span>
+      <div>
+        <h2 class="sec-t reveal" data-i18n="adv.t">超導液態極速冷凍 · 六大優勢</h2>
+        <p class="sec-st reveal" data-d="80">Six Key Advantages</p>
+      </div>
+    </div>
+    <div class="adv-grid" id="advGrid"></div>
+  </div>
+</section>
+
+<!-- ════════════ MARKET ════════════ -->
+<section class="sec sec-mkt" id="market">
+  <div class="mkt-bg"><img src="assets/img/market-coldchain.webp" alt="" loading="lazy"><i></i></div>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx">05</span>
+      <div>
+        <h2 class="sec-t reveal" data-i18n="mkt.t">應用領域與目標市場</h2>
+        <p class="sec-st reveal" data-d="80">Target Markets</p>
+      </div>
+      <p class="sec-desc reveal" data-d="140" data-i18n="mkt.desc">
+        從鮮乳、畜牧、養殖到生醫保存與食品加工，CAT 技術切入的每一條賽道，都是百億至千億美金等級的全球市場。
+      </p>
+    </div>
+    <div class="mkt-list" id="mktList"></div>
+    <div class="mkt-total reveal">
+      <span data-i18n="mkt.total">合計可服務市場產值</span>
+      <b><i data-i18n="mkt.totalv">數千億</i><em data-i18n="mkt.totalu">美金以上</em></b>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ CLIENTS ════════════ -->
+<section class="sec sec-cli" id="client">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx">06</span>
+      <div>
+        <h2 class="sec-t reveal" data-i18n="cli.t">主要客戶與合作進度</h2>
+        <p class="sec-st reveal" data-d="80">Key Clients &amp; Pipeline</p>
+      </div>
+    </div>
+
+    <!-- Flagship -->
+    <div class="flag reveal">
+      <div class="flag-glow"></div>
+      <div class="flag-tag"><span class="dot"></span><span data-i18n="cli.flagtag">旗艦戰略項目</span></div>
+      <h3 class="flag-t">印尼「紅白漁村」國家級冷鏈計畫 <em>KNMP</em></h3>
+      <ul class="flag-ul">
+        <li data-i18n="cli.f1">印尼海洋暨漁業部（KKP）主導的國家戰略計畫，規劃於全印尼沿海地區建設數千座漁村</li>
+        <li data-i18n="cli.f2">每村配置碼頭、冷凍倉儲（cold storage）、製冰廠等基礎設施</li>
+        <li data-i18n="cli.f3">瀚宇天成鎖定此波國家級冷鏈基礎建設浪潮，推動抗凍蛋白技術與冷凍設備導入合作，目前正與資本市場對接中</li>
+      </ul>
+      <div class="flag-meta">
+        <div><b>ID</b><span data-i18n="cli.fCountry">印尼 · 全國沿海</span></div>
+        <div><b>KKP</b><span data-i18n="cli.fMinistry">海洋暨漁業部主導</span></div>
+        <div class="hi"><b data-i18n="cli.fStage">對接中</b><span data-i18n="cli.fStageD">資本市場與技術導入</span></div>
+      </div>
+    </div>
+
+    <div class="cli-grid">
+      <div class="cli-col reveal">
+        <h4 class="cli-h"><span class="cli-badge ok" data-i18n="cli.done">已合作</span><em data-i18n="cli.doneEn">Track Record</em></h4>
+        <div class="cli-cards">
+          <article class="cli-card">
+            <span class="cc-idx">01</span>
+            <h5 data-i18n="cli.d1t">台農鮮乳廠（中華民國農會）</h5>
+            <p data-i18n="cli.d1d">冬季鮮乳冷凍，夏季解凍上市</p>
+          </article>
+          <article class="cli-card">
+            <span class="cc-idx">02</span>
+            <h5 data-i18n="cli.d2t">菲律賓馬尼拉經濟文化辦事處</h5>
+            <p data-i18n="cli.d2d">納入國家冷鏈發展計畫</p>
+          </article>
+          <article class="cli-card">
+            <span class="cc-idx">03</span>
+            <h5 data-i18n="cli.d3t">枝仔冰城</h5>
+            <p data-i18n="cli.d3d">珍珠冰棒、芒果冰代工（HACCP 認證）</p>
+          </article>
+        </div>
+      </div>
+      <div class="cli-col reveal" data-d="140">
+        <h4 class="cli-h"><span class="cli-badge talk" data-i18n="cli.talk">洽談中</span><em data-i18n="cli.talkEn">In Discussion</em></h4>
+        <div class="cli-cards">
+          <article class="cli-card">
+            <span class="cc-idx">01</span>
+            <h5 data-i18n="cli.p1t">3M</h5>
+            <p data-i18n="cli.p1d">挪威鮭魚整廠冷凍技術輸出</p>
+          </article>
+          <article class="cli-card">
+            <span class="cc-idx">02</span>
+            <h5 data-i18n="cli.p2t">日本住友商社</h5>
+            <p data-i18n="cli.p2d">香蕉冷凍技術輸出與設廠</p>
+          </article>
+          <article class="cli-card">
+            <span class="cc-idx">03</span>
+            <h5 data-i18n="cli.p3t">雙匯肉品</h5>
+            <p data-i18n="cli.p3d">豬肉鮮凍與活體抗凍技術</p>
+          </article>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ WORKFLOW ════════════ -->
+<section class="sec sec-flow" id="flow">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-idx">07</span>
+      <div>
+        <h2 class="sec-t reveal" data-i18n="flow.t">產品交易流程</h2>
+        <p class="sec-st reveal" data-d="80">Product Workflow</p>
+      </div>
+      <p class="sec-desc reveal" data-d="140" data-i18n="flow.desc">
+        接受訂單 → 加工冷凍 → 凍儲出貨，全程掌控品質與交期。點擊任一節點查看工序說明。
+      </p>
+    </div>
+
+    <div class="flow reveal" data-d="60">
+      <div class="flow-track"><i id="flowFill"></i></div>
+      <div class="flow-steps" id="flowSteps"></div>
+      <div class="flow-panel" id="flowPanel">
+        <div class="fp-n" id="fpN">01</div>
+        <div class="fp-txt">
+          <h4 id="fpT">—</h4>
+          <p id="fpD">—</p>
+        </div>
+        <div class="fp-ctrl">
+          <button id="fpPrev" aria-label="上一步"><svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+          <button id="fpPlay" class="fp-play" aria-label="自動播放"><svg viewBox="0 0 24 24" fill="none"><path d="M7 4l12 8-12 8V4z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+          <button id="fpNext" aria-label="下一步"><svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ CONTACT ════════════ -->
+<section class="sec sec-cta" id="contact">
+  <div class="cta-aura"></div>
+  <div class="wrap">
+    <div class="cta-grid">
+      <div class="cta-copy">
+        <span class="sec-idx">08</span>
+        <h2 class="cta-t reveal" data-i18n="cta.t">共創共享</h2>
+        <p class="cta-p reveal" data-d="80" data-i18n="cta.p">
+          感謝您的聆聽，期盼與您共同攜手 —— 讓冷凍鮮美的漁獲、肉品與水果，從產地走向世界每一張餐桌。
+        </p>
+        <div class="cta-info">
+          <div class="ci">
+            <span data-i18n="cta.comp">公司名稱</span>
+            <b data-i18n="cta.compv">瀚宇天成生技股份有限公司 ∕ 浩瀚天成生技股份有限公司</b>
+          </div>
+          <div class="ci">
+            <span data-i18n="cta.tech">核心技術</span>
+            <b data-i18n="cta.techv">CAT 細胞抗凍技術 · SLRF 超導液態抗凍系統 · DP-AFPs</b>
+          </div>
+          <div class="ci">
+            <span data-i18n="cta.scope">合作範圍</span>
+            <b data-i18n="cta.scopev">整廠技術輸出 · 抗凍蛋白供應 · 冷鏈設備建置</b>
+          </div>
+        </div>
+      </div>
+
+      <form class="cta-form reveal" data-d="140" id="ctaForm" novalidate>
+        <div class="f-row">
+          <label class="fld">
+            <span data-i18n="f.name">姓名 / 公司</span>
+            <input type="text" id="fName" data-i18n-ph="f.namePh" placeholder="請輸入您的姓名或公司名稱" required>
+            <i class="f-err" data-i18n="f.errName">請填寫姓名或公司名稱</i>
+          </label>
+          <label class="fld">
+            <span data-i18n="f.mail">電子郵件</span>
+            <input type="email" id="fMail" data-i18n-ph="f.mailPh" placeholder="name@company.com" required>
+            <i class="f-err" data-i18n="f.errMail">請填寫有效的電子郵件</i>
+          </label>
+        </div>
+        <label class="fld">
+          <span data-i18n="f.type">合作類型</span>
+          <div class="chips" id="chips">
+            <button type="button" class="chip active" data-i18n="f.c1">整廠技術輸出</button>
+            <button type="button" class="chip" data-i18n="f.c2">抗凍蛋白供應</button>
+            <button type="button" class="chip" data-i18n="f.c3">冷鏈設備建置</button>
+            <button type="button" class="chip" data-i18n="f.c4">經銷代理</button>
+            <button type="button" class="chip" data-i18n="f.c5">其他</button>
+          </div>
+        </label>
+        <label class="fld">
+          <span data-i18n="f.msg">需求說明</span>
+          <textarea id="fMsg" rows="4" data-i18n-ph="f.msgPh" placeholder="請簡述您的產品、產能與需求時程"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary full magnetic" id="fSubmit">
+          <span data-i18n="f.send">送出合作洽詢</span>
+          <svg viewBox="0 0 24 24" fill="none"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="f-ok" id="fOk">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M4 12.5l5.5 5.5L20 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span data-i18n="f.ok">已送出！我們將於兩個工作天內與您聯繫。</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ FOOTER ════════════ -->
+<footer class="ft">
+  <div class="wrap ft-in">
+    <div class="ft-l">
+      <div class="ft-brand">
+        <svg class="brand-mark" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+          <path d="M24 2 L43 13 L43 35 L24 46 L5 35 L5 13 Z" stroke="url(#fg1)" stroke-width="1.4"/>
+          <path d="M24 13 L24 35 M16 17.5 L32 30.5 M32 17.5 L16 30.5" stroke="url(#fg1)" stroke-width="1.2" stroke-linecap="round"/>
+          <defs><linearGradient id="fg1" x1="0" y1="0" x2="48" y2="48">
+            <stop offset="0" stop-color="#35E0F5"/><stop offset=".55" stop-color="#6FF2D6"/><stop offset="1" stop-color="#E8C88A"/>
+          </linearGradient></defs>
+        </svg>
+        <div>
+          <b data-i18n="ft.name">瀚宇天成生技股份有限公司</b>
+          <span data-i18n="ft.name2">浩瀚天成生技股份有限公司</span>
+          <em>Han Yu Tian Cheng Biotech Co., Ltd.</em>
+        </div>
+      </div>
+      <p class="ft-slogan" data-i18n="ft.slogan">超導液態極速冷凍 × 抗凍蛋白冷凍液 · 全球唯一一體化凍鮮解決方案</p>
+    </div>
+    <nav class="ft-nav">
+      <b data-i18n="ft.nav">網站導覽</b>
+      <a href="#about" data-i18n="nav.about">關於我們</a>
+      <a href="#tech" data-i18n="nav.tech">核心技術</a>
+      <a href="#compare" data-i18n="nav.compare">技術比較</a>
+      <a href="#advantage" data-i18n="nav.advantage">六大優勢</a>
+      <a href="#market" data-i18n="nav.market">市場應用</a>
+      <a href="#client" data-i18n="nav.client">客戶合作</a>
+      <a href="#flow" data-i18n="nav.flow">交易流程</a>
+    </nav>
+  </div>
+  <div class="wrap ft-bot">
+    <span>© <span id="yr"></span> <span data-i18n="ft.name">瀚宇天成生技股份有限公司</span>. All rights reserved.</span>
+    <button class="totop" id="toTop">
+      <span data-i18n="ft.top">回到頂端</span>
+      <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M6 11l6-6 6 6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
