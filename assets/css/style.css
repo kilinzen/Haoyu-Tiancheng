@@ -161,16 +161,38 @@ button{cursor:pointer}
 /* ═══════════ HERO ═══════════ */
 .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;
   justify-content:center;padding:calc(var(--hdr) + 40px) 0 0;overflow:hidden}
-.hero-media{position:absolute;inset:-6% -4%;z-index:0}
-.hero-img{width:100%;height:100%;object-fit:cover;opacity:.5;
-  filter:saturate(1.15) contrast(1.08) brightness(.85);
-  animation:heroZoom 22s ease-in-out infinite alternate}
-@keyframes heroZoom{from{transform:scale(1.02)}to{transform:scale(1.12)}}
+/* 底層改為「CSS 背景圖」＋「<img>」雙重來源：
+   即使某些瀏覽器/環境無法合成大型 <img> 圖層，CSS 背景仍會顯示 */
+.hero-media{position:absolute;inset:-6% -4%;z-index:0;
+  background-color:#050D1A;
+  background-image:
+    radial-gradient(70% 55% at 62% 38%,rgba(28,96,126,.55),transparent 62%),
+    radial-gradient(50% 45% at 22% 72%,rgba(20,58,86,.45),transparent 65%),
+    linear-gradient(160deg,#07182B 0%,#050D1A 55%,#04070F 100%)}
+/* 首頁大圖：改用 CSS 背景（等同 object-fit:cover），
+   預設 JPEG —— 在所有瀏覽器與 GPU 環境都能穩定繪製 */
+.hero-media::before{
+  content:"";position:absolute;inset:0;
+  /* 注意：本檔位於 assets/css/，圖片路徑必須回到上一層 */
+  background-image:url("../img/hero-cryo.jpg");
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  opacity:.78}
+/* 支援 image-set 的瀏覽器改用更小的 WebP（畫質相同、體積省一半） */
+@supports (background-image:image-set(url("a.webp") type("image/webp"))){
+  .hero-media::before{
+    background-image:image-set(url("../img/hero-cryo.webp") type("image/webp"),
+                               url("../img/hero-cryo.jpg")  type("image/jpeg"))}
+}
+/* 遮罩：確保任何容器／瀏覽器（含強制深色、反轉、對比模式）下
+   文字仍有足夠對比。左中右都保留暗度，不讓底圖過曝吃掉文字。 */
 .hero-veil{position:absolute;inset:0;
   background:
-    radial-gradient(120% 80% at 12% 20%,rgba(4,7,15,.55),transparent 60%),
-    linear-gradient(180deg,rgba(4,7,15,.92) 0%,rgba(4,7,15,.42) 42%,rgba(4,7,15,.94) 100%),
-    linear-gradient(90deg,rgba(4,7,15,.95) 0%,rgba(4,7,15,.2) 55%,transparent 100%)}
+    radial-gradient(115% 75% at 14% 18%,rgba(4,7,15,.55),transparent 62%),
+    linear-gradient(180deg,rgba(4,7,15,.82) 0%,rgba(4,7,15,.42) 46%,rgba(4,7,15,.86) 100%),
+    linear-gradient(90deg,rgba(4,7,15,.88) 0%,rgba(4,7,15,.34) 50%,rgba(4,7,15,.40) 72%,rgba(4,7,15,.74) 100%)}
+/* 首頁標題／文字加陰影：即使底圖偏亮或被反轉，文字依然清楚 */
+.hero-h1,.hero-sub,.eyebrow{text-shadow:0 2px 14px rgba(3,7,14,.92),0 0 40px rgba(3,7,14,.6)}
+.hero-h1 .grad,.hero-h1 .grad2{filter:drop-shadow(0 3px 12px rgba(3,7,14,.95))}
 .hero-grid{position:absolute;inset:0;opacity:.3;
   background-image:linear-gradient(rgba(53,224,245,.07) 1px,transparent 1px),
                    linear-gradient(90deg,rgba(53,224,245,.07) 1px,transparent 1px);
@@ -224,11 +246,15 @@ button{cursor:pointer}
 /* Hero stats */
 .hero-stats{display:grid;gap:2px;justify-self:end}
 .hstat{padding:16px 22px;border-left:1px solid var(--line);text-align:right;min-width:190px}
-.hstat b{display:block;font-family:var(--fD);font-size:clamp(30px,3.4vw,44px);font-weight:200;line-height:1.1;
-  background:linear-gradient(160deg,#fff,#9FE4F7);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hstat b{display:block;font-family:var(--fD);font-size:clamp(30px,3.4vw,44px);font-weight:300;line-height:1.1;
+  background:linear-gradient(160deg,#FFFFFF,#B6EBFA 70%,#7FD8F0);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  /* 底圖明亮處仍保有可讀性 */
+  filter:drop-shadow(0 1px 6px rgba(3,7,14,.85)) drop-shadow(0 0 18px rgba(3,7,14,.55))}
 .hstat b i{font-style:normal;font-size:.5em;color:var(--cyan);-webkit-text-fill-color:var(--cyan)}
-.hstat span{display:block;margin-top:4px;font-size:12px;color:var(--dim);line-height:1.5}
-.hstat.hl b{background:linear-gradient(160deg,#FFF3DC,var(--gold));-webkit-background-clip:text;background-clip:text}
+.hstat span{display:block;margin-top:4px;font-size:12px;color:#A8BED4;line-height:1.5;
+  text-shadow:0 1px 6px rgba(3,7,14,.9)}
+.hstat.hl b{background:linear-gradient(160deg,#FFF6E2,var(--gold));-webkit-background-clip:text;background-clip:text}
 
 /* Hero bottom */
 .hero-bottom{position:relative;z-index:2;width:min(1320px,92vw);margin:0 auto;
